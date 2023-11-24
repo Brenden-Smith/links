@@ -52,7 +52,7 @@ export default function Home() {
           }}
         />
       </div>
-      <ul className="flex flex-col space-y-4 mt-8 transition duration-1000 animate-fade-in animation-delay-2">
+      <ul className="flex flex-col space-y-4 mt-8 transition duration-1000 animate-fade-in animation-delay-2 w-full max-w-sm">
         {links.map((link: LinkItemProps) => (
           <li key={link.title}>
             <LinkItem {...link} />
