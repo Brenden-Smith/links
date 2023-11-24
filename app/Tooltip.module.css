@@ -1,0 +1,67 @@
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip .tooltipwrapper {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext {
+  --tw-bg-opacity: 0.8;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  --tw-backdrop-blur: blur(10px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+  visibility: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: "fit-content";
+  padding-left: 10px;
+  padding-right: 10px;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  transform: translateX(calc(-50%));
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(107 114 128 / var(--tw-bg-opacity)) transparent transparent
+    transparent;
+  --tw-border-opacity: 0.2;
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}

@@ -1,11 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +20,27 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(270deg, #000000, #434343);;
+  background-size: 600% 600%;
+  animation: animatedBackground 10s ease-in-out infinite;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
