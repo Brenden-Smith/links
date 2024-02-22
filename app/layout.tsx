@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-screen overflow-hidden pb-20`}>
+      <body className={`relative ${inter.className} min-h-screen pb-20`}>
         {children}
         <footer className="absolute inset-x-0 bottom-0 text-center text-white p-4">
           Brenden Smith &copy; {new Date().getFullYear()}
