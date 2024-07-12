@@ -8,12 +8,7 @@ export type IconProps = {
   noStyle?: boolean;
 } & ImageProps;
 
-const Icon = memo(function Icon({
-  src,
-  size,
-  noStyle,
-  ...props
-}: IconProps) {
+const Icon = memo(function Icon({ src, size, noStyle, ...props }: IconProps) {
   const className = `${!noStyle && "mr-3 mb-3"} ${props.className}}`;
   return (
     <div className={`flex items-center ${className}`}>

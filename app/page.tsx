@@ -1,12 +1,11 @@
 import Image from "next/image";
 import links from "./links.json";
-import LinkItem, { LinkItemProps } from "./LinkItem";
-import IconButton from "./IconButton";
+import LinkItem, { LinkItemProps } from "@/components/LinkItem";
+import IconButton from "@/components/IconButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brenden Smith ─ Home",
-  description: "Full Stack Software Engineer",
+  title: "Home",
 };
 
 export default function Home() {
@@ -18,11 +17,12 @@ export default function Home() {
         height={150}
         className="rounded-full mb-5"
         alt="Brenden Smith"
+        priority
       />
       <h1 className="text-3xl font-bold mb-3">Brenden Smith</h1>
-      <h3 className="text-xl text-center font-light mb-2">
+      <h2 className="text-xl text-center font-light mb-2">
         Full Stack Software Engineer
-      </h3>
+      </h2>
       <div className="flex flex-row space-x-5">
         <IconButton
           href="mailto:contact@brenden-smith.com"
@@ -63,9 +63,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-      <div className="px-5">
-        <embed src="https://github-readme-stats.vercel.app/api?username=Brenden-Smith&hide_rank=true&theme=dark" />
-      </div>
     </main>
   );
 }
