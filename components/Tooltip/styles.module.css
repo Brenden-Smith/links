@@ -3,12 +3,6 @@
   position: relative;
 }
 
-.tooltip .tooltipwrapper {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-
 .tooltip .tooltiptext {
   --tw-bg-opacity: 0.8;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
